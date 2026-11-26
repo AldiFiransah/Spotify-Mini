@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pemutar Musik</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="amb"></div>
+<aside>
+  <header>
+    <h1>Pustaka Musik</h1>
+    <label class="btn">Pilih folder musik<input id="folder" type="file" webkitdirectory multiple hidden></label>
+    <input id="cari" type="search" placeholder="Cari lagu...">
+  </header>
+  <ul id="list"></ul>
+</aside>
+<main>
+  <img id="cover" alt="Cover album">
+  <h2 id="judul">Belum ada lagu</h2>
+  <p id="artis">Pilih folder musik untuk mulai</p>
+  <canvas id="viz"></canvas>
+</main>
+<footer>
+  <div class="ctrl">
+    <button id="acak" aria-label="Acak" title="Acak (S)">⇄</button>
+    <button id="prev" aria-label="Sebelumnya" title="Sebelumnya (P)">⏮</button>
+    <button id="play" aria-label="Putar" title="Putar/jeda (Spasi)">▶</button>
+    <button id="next" aria-label="Berikutnya" title="Berikutnya (N)">⏭</button>
+    <button id="ulang" aria-label="Ulang" title="Ulang (R)">↻</button>
+  </div>
+  <div class="bar">
+    <span id="now">0:00</span><input id="seek" type="range" min="0" max="100" value="0"><span id="dur">0:00</span>
+    <span>Vol</span><input id="vol" type="range" min="0" max="1" step="0.01" value="0.8" style="max-width:110px">
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
